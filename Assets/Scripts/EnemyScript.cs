@@ -9,6 +9,10 @@ public class EnemyScript : MonoBehaviour
     private float waitTime = 1.0f;
     private float timer = 0.0f;
 
+
+
+   
+
     private Animator enemyAnim;
 
 
@@ -19,6 +23,7 @@ public class EnemyScript : MonoBehaviour
     void Start()
     {
         enemyAnim = GetComponent<Animator>();
+
 
 
     }
@@ -36,6 +41,16 @@ public class EnemyScript : MonoBehaviour
     {
         transform.Translate(userDirection * movespeed * Time.deltaTime);
 
+    }
+
+
+    private void OnCollisionEnter2D(Collision2D collision)
+    {
+        if(collision.gameObject.GetComponent<Movement>() != null)
+        {
+            Movement movement = collision.gameObject.GetComponent<Movement>();
+            movement.KillPlayer();
+        }
     }
 
 }

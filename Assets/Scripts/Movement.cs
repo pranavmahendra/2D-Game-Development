@@ -1,10 +1,14 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class Movement : MonoBehaviour
 {
     public Animator animator;
+    public ScoreController scoreController;
+    
+    public Levelcomplete levelcomplete;
 
     public float speed;
     public float jump;
@@ -15,6 +19,25 @@ public class Movement : MonoBehaviour
     {
         Debug.Log("Player controller awake.");
         rb2d = gameObject.GetComponent<Rigidbody2D>();
+    }
+
+
+    public void PickUpKey()
+    {
+        scoreController.incrementScore(10);
+    }
+
+    public void KillPlayer()
+    {
+        Debug.Log("Player killed by enemy.");
+        reloadLevel();
+
+    }
+
+    public void reloadLevel()
+    {
+
+        SceneManager.LoadScene(1);
     }
         
 

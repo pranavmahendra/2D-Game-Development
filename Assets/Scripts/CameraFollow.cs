@@ -17,14 +17,14 @@ public class CameraFollow : MonoBehaviour
     private Transform characterTransform;
 
     [SerializeField]
-    private GameObject ellen;
+    private GameObject character;
 
    
 
 
     private void Start()
     {
-        characterTransform = ellen.transform;
+        characterTransform = character.transform;
         
     }
 

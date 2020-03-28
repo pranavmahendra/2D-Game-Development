@@ -8,39 +8,25 @@ public class Levelcomplete : MonoBehaviour
 {
 
     public GameObject UI;
-    private Scene scene;
     public Button resartButton;
 
-    private void Start()
-    {
-        //UI display off.
-        UI.SetActive(false);
-
-        //Restart button game component set.
-        resartButton = gameObject.GetComponent<Button>();
-
-        scene = SceneManager.GetActiveScene();
-        Debug.Log("Active scene is " + scene.name);
-    }
+    public GameoverController gameoverController;
 
 
+    //Collision detect wiith the statue.
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        if (collision.GetComponent("Movement") != null)
+        if (collision.gameObject.GetComponent<Movement>() != null)
         {
             // UI display activated and restart button should be activated.
 
-            UI.SetActive(true);
-            Time.timeScale = 0f;
-            resartButton.onClick.AddListener(restartScene);
+            gameoverController.UI.SetActive(true);
+            //Time.timeScale = 0f;
+            
 
         }
     }
 
-    private void restartScene()
-    {
-        SceneManager.LoadScene(scene.name);
-        Time.timeScale = 1f;
-    }
 
+    
 }

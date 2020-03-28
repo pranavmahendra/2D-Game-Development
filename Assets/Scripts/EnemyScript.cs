@@ -14,7 +14,7 @@ public class EnemyScript : MonoBehaviour
 
 
     private Vector3 userDirection = Vector3.right;
-    private Vector3 switchDirection = Vector3.left;
+
     
 
     // Start is called before the first frame update
@@ -40,7 +40,7 @@ public class EnemyScript : MonoBehaviour
     {
 
             
-        transform.Translate(switchDirection * movespeed * Time.deltaTime);
+        transform.Translate(userDirection * movespeed * Time.deltaTime);
 
     }
 

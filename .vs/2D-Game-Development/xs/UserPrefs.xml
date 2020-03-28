@@ -1,9 +1,16 @@
 ﻿<Properties StartupConfiguration="{651643A2-7CFD-A5FF-F6C7-515671AA6CC7}|">
-  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/Scripts/Movement.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/Scripts/Levelcomplete.cs">
     <Files>
-      <File FileName="Assets/2DGamekit/2DGameKit_Third-PartyNotice.txt" Line="1" Column="1" />
-      <File FileName="Assets/Scripts/ColliderScript.cs" Line="17" Column="1" />
-      <File FileName="Assets/Scripts/Movement.cs" Line="20" Column="2" />
+      <File FileName="Assets/Scripts/Pausegame.cs" Line="38" Column="30" IsPinned="True" />
+      <File FileName="Assets/Scripts/scenetransition.cs" Line="36" Column="1" />
+      <File FileName="Assets/Scripts/ColliderScript.cs" Line="1" Column="1" />
+      <File FileName="Assets/Scripts/EnemyScript.cs" Line="12" Column="1" />
+      <File FileName="Assets/Scripts/CameraFollow.cs" Line="37" Column="1" />
+      <File FileName="Assets/Scripts/KeyController.cs" Line="50" Column="1" />
+      <File FileName="Assets/Scripts/GameoverController.cs" Line="4" Column="22" />
+      <File FileName="Assets/Scripts/Movement.cs" Line="39" Column="35" NotebookId="1" />
+      <File FileName="Assets/Scripts/KeyController.cs" Line="16" Column="34" NotebookId="1" />
+      <File FileName="Assets/Scripts/Levelcomplete.cs" Line="41" Column="1" NotebookId="1" />
     </Files>
     <Pads>
       <Pad Id="ProjectPad">
@@ -15,7 +22,7 @@
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.PinnedWatches />
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
-  <MonoDevelop.Ide.ItemProperties.Assembly-CSharp PreferredExecutionTarget="46fa0cfc-1553-4a25-8a85-9ff6e7f31e68" />
+  <MonoDevelop.Ide.ItemProperties.Assembly-CSharp PreferredExecutionTarget="dcc5f364-ef88-4f32-9a4a-89388258ecb2" />
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
     <BreakpointStore />
   </MonoDevelop.Ide.DebuggingService.Breakpoints>

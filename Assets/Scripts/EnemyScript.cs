@@ -8,15 +8,13 @@ public class EnemyScript : MonoBehaviour
     public float movespeed;
     private float waitTime = 1.0f;
     private float timer = 0.0f;
-
-
-
    
 
     private Animator enemyAnim;
 
 
-    private Vector3 userDirection = Vector3.right; 
+    private Vector3 userDirection = Vector3.right;
+    private Vector3 switchDirection = Vector3.left;
     
 
     // Start is called before the first frame update
@@ -24,7 +22,7 @@ public class EnemyScript : MonoBehaviour
     {
         enemyAnim = GetComponent<Animator>();
 
-
+        
 
     }
 
@@ -34,12 +32,15 @@ public class EnemyScript : MonoBehaviour
     void Update()
     {
         movementEnemy();
+        
 
     }
 
     private void movementEnemy()
     {
-        transform.Translate(userDirection * movespeed * Time.deltaTime);
+
+            
+        transform.Translate(switchDirection * movespeed * Time.deltaTime);
 
     }
 
@@ -52,5 +53,6 @@ public class EnemyScript : MonoBehaviour
             movement.KillPlayer();
         }
     }
+
 
 }

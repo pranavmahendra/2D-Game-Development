@@ -99,6 +99,8 @@
     <Compile Include="Assets\Scripts\GameoverController.cs" />
     <Compile Include="Assets\Scripts\KeyController.cs" />
     <Compile Include="Assets\Scripts\Levelcomplete.cs" />
+    <Compile Include="Assets\Scripts\LevelController.cs" />
+    <Compile Include="Assets\Scripts\LevelData.cs" />
     <Compile Include="Assets\Scripts\Movement.cs" />
     <Compile Include="Assets\Scripts\Pausegame.cs" />
     <Compile Include="Assets\Scripts\scenetransition.cs" />

@@ -16,6 +16,7 @@ public class scenetransition : MonoBehaviour
 
     private void Start()
     {
+        
         transitionAnim = plane.GetComponent<Animator>();
         plane.SetActive(false);
         transitionButton.onClick.AddListener(OnButtonClick);

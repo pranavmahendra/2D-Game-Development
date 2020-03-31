@@ -500,6 +500,7 @@ GameObject:
   - component: {fileID: 430069552}
   - component: {fileID: 430069551}
   - component: {fileID: 430069550}
+  - component: {fileID: 430069553}
   m_Layer: 5
   m_Name: Button
   m_TagString: Untagged
@@ -570,18 +571,7 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 430069551}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 11500000, guid: fd28272f41f6d42dc8e050ae186e6f9f, type: 3}
-        m_MethodName: 
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
+      m_Calls: []
 --- !u!114 &430069551
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -618,6 +608,19 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 430069548}
   m_CullTransparentMesh: 0
+--- !u!114 &430069553
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 430069548}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 842610989e745438c826c8fcd0211e9e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  levelName: Lobby
 --- !u!1 &861215051
 GameObject:
   m_ObjectHideFlags: 0

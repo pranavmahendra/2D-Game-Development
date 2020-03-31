@@ -1,9 +1,11 @@
 ﻿using System;
-public class LevelData
-
+public enum LevelStatus
 {
-
-    public string[] levels = new string[] { "level1", "Level2","Lobby" };
-
-
+    Locked,
+    Unlocked,
+    Completed
 }
+
+
+
+

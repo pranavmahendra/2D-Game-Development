@@ -4,6 +4,7 @@ using UnityEngine;
 using UnityEngine.UI;
 using UnityEngine.SceneManagement;
 
+
 public class Levelloader : MonoBehaviour
 {
    
@@ -11,7 +12,10 @@ public class Levelloader : MonoBehaviour
 
     //private GameoverController gameOverUI;
 
-        public string levelName;
+    public string levelName;
+
+    public AudioSource buttonAudio;
+    public AudioClip pressSound;
 
 
     public static Scene currentLevel;
@@ -23,7 +27,11 @@ public class Levelloader : MonoBehaviour
         currentLevel = SceneManager.GetActiveScene();
 
         button = GetComponent<Button>();
-            button.onClick.AddListener(OnClick);
+        button.onClick.AddListener(OnClick);
+        
+
+        //Call audio source.
+        buttonAudio = gameObject.GetComponent<AudioSource>();
 
         }
 
@@ -45,6 +53,9 @@ public class Levelloader : MonoBehaviour
                 break;
         }
         SceneManager.LoadScene(levelName);
+
+       
+        
         }
 
 
@@ -52,6 +63,12 @@ public class Levelloader : MonoBehaviour
     {
 
         SceneManager.LoadScene(currentLevel.buildIndex);
+    }
+
+    //OnPress
+    public void clickSound()
+    {
+        buttonAudio.PlayOneShot(pressSound);
     }
 
 }

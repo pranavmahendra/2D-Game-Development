@@ -347,7 +347,7 @@ GameObject:
   - component: {fileID: 186525594}
   - component: {fileID: 186525593}
   m_Layer: 0
-  m_Name: GameObject
+  m_Name: LevelManager
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -770,8 +770,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   levelName: Level1
-  currentLevel:
-    m_Handle: 0
 --- !u!1 &857708225
 GameObject:
   m_ObjectHideFlags: 0
@@ -1185,8 +1183,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   levelName: Level2
-  currentLevel:
-    m_Handle: 0
 --- !u!1 &1599897309
 GameObject:
   m_ObjectHideFlags: 0

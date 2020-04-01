@@ -2,28 +2,36 @@
 using System.Collections.Generic;
 using UnityEngine;
 
+
 public class EnemyScript : MonoBehaviour
 {
 
     public float movespeed;
-    private float waitTime = 1.0f;
-    private float timer = 0.0f;
-   
+    //private float waitTime = 1.0f;
+    //private float timer = 0.0f;
 
-    private Animator enemyAnim;
 
+
+    
+
+
+    private Vector3 scaleValue;
 
     private Vector3 userDirection = Vector3.right;
+    private Vector3 oppositeDirection = Vector3.left;
+
 
     
 
     // Start is called before the first frame update
     void Start()
     {
-        enemyAnim = GetComponent<Animator>();
+        //enemyAnim = GetComponent<Animator>();
 
-        
-
+        //Get current scale value of the character
+        scaleValue = transform.localScale;
+        Debug.Log("Enemy scale :" + scaleValue);
+         
     }
 
 
@@ -31,16 +39,26 @@ public class EnemyScript : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        movementEnemy();
-        
 
+       movementEnemy();
+
+        
     }
 
     private void movementEnemy()
     {
+        if(scaleValue.x < 0)
+        {
+            transform.Translate(oppositeDirection * movespeed * Time.deltaTime);
+        }
+        else
+        {
+            transform.Translate(userDirection * movespeed * Time.deltaTime);
+        }
 
+       
             
-        transform.Translate(userDirection * movespeed * Time.deltaTime);
+        
 
     }
 
@@ -49,9 +67,19 @@ public class EnemyScript : MonoBehaviour
     {
         if(collision.gameObject.GetComponent<Movement>() != null)
         {
-            Movement movement = collision.gameObject.GetComponent<Movement>();
-            movement.KillPlayer();
+            Debug.Log("Enemy collided with the player");
+            Levelloader.reloadLevel();
         }
+
+        else if (collision.gameObject.CompareTag("FlipTrigger"))
+        {
+            Debug.Log("Chomper collided with wall");
+            scaleValue = new Vector3(scaleValue.x * -1f, scaleValue.y, scaleValue.z);
+            transform.localScale = scaleValue;
+            
+            
+        }
+
     }
 
 

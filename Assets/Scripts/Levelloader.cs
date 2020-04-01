@@ -14,7 +14,7 @@ public class Levelloader : MonoBehaviour
         public string levelName;
 
 
-    public Scene currentLevel;
+    public static Scene currentLevel;
 
 
     private void Awake()
@@ -44,11 +44,11 @@ public class Levelloader : MonoBehaviour
                 SceneManager.LoadScene(levelName);
                 break;
         }
-            SceneManager.LoadScene(levelName);
+        SceneManager.LoadScene(levelName);
         }
 
 
-    public void reloadLevel()
+    public static void reloadLevel()
     {
 
         SceneManager.LoadScene(currentLevel.buildIndex);

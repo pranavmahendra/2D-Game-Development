@@ -8,7 +8,7 @@ public class Movement : MonoBehaviour
     public Animator animator;
     public ScoreController scoreController;
 
-    public Levelloader reference;
+    //public Levelloader reference;
 
     public Levelcomplete levelcomplete;
 
@@ -19,7 +19,7 @@ public class Movement : MonoBehaviour
 
     private void Awake()
     {
-        reference = new Levelloader();
+        //reference = new Levelloader();
 
         Debug.Log("Player controller awake.");
         rb2d = gameObject.GetComponent<Rigidbody2D>();
@@ -32,22 +32,22 @@ public class Movement : MonoBehaviour
     }
 
 
-    public void KillPlayer()
-    {
+    //public void KillPlayer()
+    //{
 
 
-        reference.reloadLevel();
+    //    reference.reloadLevel();
 
-    }
+    //}
 
-    private void OnCollisionEnter2D(Collision2D collision)
-    {
-        if (collision.gameObject.GetComponent<EnemyScript>() == true)
-        {
-            Debug.Log("Player died chump");
-            reference.reloadLevel();
-        }
-    }
+    //private void OnCollisionEnter2D(Collision2D collision)
+    //{
+    //    if (collision.gameObject.GetComponent<EnemyScript>() == true)
+    //    {
+    //        Debug.Log("Player died chump");
+    //        reference.reloadLevel();
+    //    }
+    //}
 
 
 

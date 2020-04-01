@@ -808,7 +808,7 @@ GameObject:
   - component: {fileID: 1060419610}
   - component: {fileID: 1060419609}
   m_Layer: 0
-  m_Name: GameObject
+  m_Name: LevelManager
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -823,12 +823,11 @@ MonoBehaviour:
   m_GameObject: {fileID: 1060419608}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: fd28272f41f6d42dc8e050ae186e6f9f, type: 3}
+  m_Script: {fileID: 11500000, guid: 611183ab25f4c465eb95d62112cd71fa, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  plane: {fileID: 1479271729}
-  transitionButton: {fileID: 430069550}
-  newScene: Lobby
+  levels:
+  - Lobby
 --- !u!4 &1060419610
 Transform:
   m_ObjectHideFlags: 0

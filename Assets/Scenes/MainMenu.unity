@@ -782,6 +782,7 @@ MonoBehaviour:
   audio: {fileID: 0}
   clips:
   - {fileID: 8300000, guid: 0651b56880a11ef45909b779443691aa, type: 3}
+  - {fileID: 8300000, guid: 3a9ba69f03694d44a9968f5b7c4abb1c, type: 3}
 --- !u!4 &589462166
 Transform:
   m_ObjectHideFlags: 0

@@ -38,19 +38,11 @@ public class SoundManager : MonoBehaviour
     private void Start()
     {
         activeScene = SceneManager.GetActiveScene();
-        switchAudio();
-      
-    }
-
-    public void switchAudio()
-    {
         // If level1 with build index 1 is playing Clip1 from array should play.
-        if (activeScene.buildIndex == 1)
+        if (activeScene.buildIndex == 1 || activeScene.buildIndex == 2)
         {
             Debug.Log("Level music playing");
-            audio = GetComponent<AudioSource>();
-            audio.clip = clips[1];
-            audio.Play();
+            switchAudio();
         }
 
         else
@@ -60,8 +52,17 @@ public class SoundManager : MonoBehaviour
             audio.clip = clips[0];
             audio.Play();
         }
+
     }
 
+    public void switchAudio()
+    {
+        audio.Stop();
+        audio.clip = clips[1];
+        audio.Play();
+    }
+
+    
 }
 
    
